@@ -21,7 +21,6 @@ session_regenerate_id();//avoid session hyjacking
 $_SESSION['id'] = $uid;
 $_SESSION['type']=$type;
 $_SESSION['email']=$ema;
-
 header("Location:index.php");
 $success_msg[]='Successfully registered!';
 exit();

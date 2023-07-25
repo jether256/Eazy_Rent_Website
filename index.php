@@ -9,11 +9,11 @@ include("includes/header.php");
    
    <section class="center">
 
-      <form action="search.php" method="post">
+      <form action="search.php" method="POST">
          <h3>find your perfect home</h3>
          <div class="box">
             <p>enter location <span>*</span></p>
-            <input type="text" name="location" required maxlength="50" placeholder="enter ciyt name" class="input">
+            <input type="text" name="location" required maxlength="50" placeholder="enter place name" class="input">
          </div>
          <div class="flex">
             <div class="box">
@@ -27,11 +27,13 @@ include("includes/header.php");
                <option value="Land">Land</option>
                <option value="Warehouses">Warehouses</option>
                <option value="Tourist B & B">Tourist B & B</option>
+                <option value="Shops">Shops</option>
                </select>
             </div>
             <div class="box">
                <p>Bed Rooms<span>*</span></p>
                <select name="bedroom" class="input" required>
+               <option value="0">0</option>   
                <option value="1">1</option>
                <option value="2">2</option>
                <option value="3">3</option>
@@ -40,7 +42,7 @@ include("includes/header.php");
                </select>
             </div>
             <div class="box">
-               <p>maximum rent<span>*</span></p>
+               <p>minimum rent<span>*</span></p>
                <select name="minimum" class="input" required>
                   <option value="100000">100,000 Shs</option>
                   <option value="200000">200,000 Shs</option>
@@ -105,45 +107,47 @@ include("includes/header.php");
 
 <section class="services">
 
-   <h1 class="heading">our services</h1>
+   <h1 class="heading">Categories</h1>
 
    <div class="box-container">
 
-      <div class="box">
-         <img src="images/icon-1.png" alt="">
-         <h3>buy house</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
 
-      <div class="box">
+      <?php
+      $cat= new Property($con);
+      echo $cat->getCategory();
+      ?>
+
+       
+
+     <!--  <div class="box">
          <img src="images/icon-2.png" alt="">
-         <h3>rent house</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
+         <h3>rent houses</h3>
+         <p>Rent houses,office space,ware houses ,land at an affordable price</p>
+      </div> -->
 
-      <div class="box">
+     <!--  <div class="box">
          <img src="images/icon-3.png" alt="">
          <h3>sell house</h3>
          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
+      </div> -->
 
-      <div class="box">
+     <!--  <div class="box">
          <img src="images/icon-4.png" alt="">
          <h3>flats and buildings</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
+         <p>Rent high quality apartments on executive flats and buildings</p>
+      </div> -->
 
-      <div class="box">
+     <!--  <div class="box">
          <img src="images/icon-5.png" alt="">
          <h3>shops and malls</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
+         <p>Rent shops at affordable prices</p>
+      </div> -->
 
-      <div class="box">
+     <!--  <div class="box">
          <img src="images/icon-6.png" alt="">
          <h3>24/7 service</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
+         <p>We Offer Our Services all day long</p>
+      </div> -->
 
    </div>
 
@@ -177,19 +181,25 @@ include("includes/header.php");
 
 </section>
 
+<section class="services">
+
+   <h1 class="heading">Top Business Owners</h1>
+
+   <div class="box-container">
+
+
+      <?php
+      $cat= new Property($con);
+      echo $cat->getTopRand();
+      ?>
+
+   </div>
+
+</section>
+
 <!-- listings section ends -->
 
 
-
-
-<?php
-
-$ko= new Unique();
-
-echo $ko->createUnique();
-
-
-?>
 
 
 

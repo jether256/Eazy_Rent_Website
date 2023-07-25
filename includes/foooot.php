@@ -6,9 +6,9 @@
    <section class="flex">
 
       <div class="box">
-         <a href="tel:1234567890"><i class="fas fa-phone"></i><span>0703157610</span></a>
-         <a href="tel:1112223333"><i class="fas fa-phone"></i><span>0778316724</span></a>
-         <a href="mailto:shaikhanas@gmail.com"><i class="fas fa-envelope"></i><span>wahab@gmail.com</span></a>
+         <a href="tel:0705195464"><i class="fas fa-phone"></i><span>0705195464</span></a>
+         <a href="tel:0778316724"><i class="fas fa-phone"></i><span>0778316724</span></a>
+         <a href="mailto:eazyrent256@gmail.com"><i class="fas fa-envelope"></i><span>eazyrent256@gmail.com</span></a>
          <a href="#"><i class="fas fa-map-marker-alt"></i><span>Kampala</span></a>
       </div>
 
@@ -17,7 +17,7 @@
          <a href="about.php"><span>about</span></a>
          <a href="contact.php"><span>contact</span></a>
          <a href="listings.php"><span>all listings</span></a>
-         <a href="#"><span>saved properties</span></a>
+         
       </div>
 
       <div class="box">

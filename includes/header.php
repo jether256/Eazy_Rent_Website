@@ -58,6 +58,8 @@ $type='';
 }
 
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +77,8 @@ $type='';
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
    
 
 </head>
@@ -92,9 +95,22 @@ $type='';
          <a href="index.php" class="logo"><img src="assets/images/logo/loo.png" height="40px" width="100px" ></a>
 
          <ul>
-               <?php if(($type == "owner" ) && ($user['status']=="verified")){?>
-            <li><a href="post_property.php">post property<i class="fas fa-paper-plane"></i></a></li>
-               <?php } ?>
+
+
+
+
+
+               <?php if(($type == "owner" ) && ($user['status']=="verified")){
+
+
+                  $but= new MyProperty($con,$userLoggedIn);
+                  echo $but->getButtons();
+
+
+                 } ?>
+
+
+
          </ul>
       </section>
    </nav>
@@ -111,6 +127,8 @@ $type='';
 
 
                 <?php if($type == "owner" ) {?>
+
+
    
                <li><a href="mylistings.php">My Listings<i class="fas fa-angle-down"></i></a>
                   <ul>
@@ -137,8 +155,9 @@ $type='';
                  <?php } ?>
                	  <li><a href="contact.php">Contact Us</a></li>
                	  <li><a href="about.php">About Us</a></li>
-
+                    <?php if($type == "user" ) {?>
                	  <li><a href="#">Saved <i class="far fa-heart"></i></a></li>
+                    <?php } ?>
             	<li><a href="#">Account <i class="fas fa-angle-down"></i></a>
             	<ul>
 

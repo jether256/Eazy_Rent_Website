@@ -20,8 +20,8 @@ include("includes/header.php");
       </div>
       <div class="content">
          <h3>why choose us?</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolorem provident voluptatum distinctio laborum veritatis vitae suscipit praesentium fugiat unde?</p>
-         <a href="contact.html" class="inline-btn">contact us</a>
+         <p>We list properties from trusted property owners after doing a backgroud check so expect legit properties</p>
+         <a href="contact.php" class="inline-btn">contact us</a>
       </div>
    </div>
 
@@ -40,19 +40,19 @@ include("includes/header.php");
       <div class="box">
          <img src="images/step-1.png" alt="">
          <h3>search property</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, placeat.</p>
+         <p>Search a property of your own choice</p>
       </div>
 
       <div class="box">
          <img src="images/step-2.png" alt="">
          <h3>contact agents</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, placeat.</p>
+         <p>Contact the owner of the property through whatsapp or by a direct call</p>
       </div>
 
       <div class="box">
          <img src="images/step-3.png" alt="">
          <h3>enjoy property</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, placeat.</p>
+         <p>Enjoy renting the property</p>
       </div>
 
    </div>

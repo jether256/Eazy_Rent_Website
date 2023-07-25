@@ -1,4 +1,4 @@
-<?php
+ <?php
 include("includes/header.php");
 require 'includes/form_handlers/login_handler.php';
 ?>

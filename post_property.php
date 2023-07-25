@@ -16,19 +16,31 @@ $userLoggedIn='';
 
 }
 
+if (isset($_SESSION['id'])) {
+            $userLoggedIn = $_SESSION['id'];
+            $user_details_query = mysqli_query($con, "SELECT * FROM business WHERE user_id='$userLoggedIn'");
+            $count=mysqli_num_rows($user_details_query);
 
-if(isset($_POST['submit'])){
+            if($count==1){
 
-     $post= new MyProperty($con,$userLoggedIn);
-         $post->postProperty($_POST['property_name'],$_POST['property_price'],$_POST['address'],
-            $_POST['offer'],$_POST['con_status'],$_POST['fun_status'],$_POST['bedroom'],$_POST['bathroom'],$_POST['floors'],$_POST['kit'],$_POST['pro_sq'],$_POST['cap_sq'],$_POST['description'],
-            $_FILES['img_o1']['name'],$_FILES['img_o2']['name'],$_FILES['img_o3']['name'],$_FILES['img_o4']['name'],$_FILES['img_o5']['name']
-      );
+              if(isset($_POST['submit'])){
+
+              $post= new MyProperty($con,$userLoggedIn);
+                  $post->postProperty($_POST['property_name'],$_POST['property_price'],$_POST['address'],
+                     $_POST['offer'],$_POST['con_status'],$_POST['fun_status'],$_POST['bedroom'],$_POST['bathroom'],$_POST['floors'],$_POST['kit'],$_POST['pro_sq'],$_POST['cap_sq'],$_POST['description'],
+                     $_FILES['img_o1']['name'],$_FILES['img_o2']['name'],$_FILES['img_o3']['name'],$_FILES['img_o4']['name'],$_FILES['img_o5']['name']
+               );
+            }else{
+               header("Location:regBiz.php");
+               echo "<h1>Please Register Your business before you post a property </h1>";
+            }
 
 
-}
+
+         }
 
 
+         }
 
 ?>
 

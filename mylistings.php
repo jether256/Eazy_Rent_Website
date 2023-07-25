@@ -27,18 +27,28 @@ header("Location:index.php");
    <div class="box-container">
 
 
-       
+       <?php
+       if (isset($_SESSION['id'])) {
+            $userLoggedIn = $_SESSION['id'];
+            $user_details_query = mysqli_query($con, "SELECT * FROM house WHERE user_id='$userLoggedIn'");
+            $count=mysqli_num_rows($user_details_query);
+
+            if($count==1){
+
+               $all= new MyProperty($con,$userLoggedIn);
+
+               echo $all->allMyProperties();
+
+            }else{
+
+               echo "You have not posted any property";
+            }
+         }
+
+       ?>
 
 
-     <?php
-
-  
-      $all= new MyProperty($con,$userLoggedIn);
-
-      echo $all->allMyProperties();
-
-
-     ?> 
+    
 
    </div>
 
